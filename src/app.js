@@ -16,6 +16,8 @@ import MongoStore from "connect-mongo";
 import cookieParser from "cookie-parser";
 import session from "express-session";
 
+const port = process.env.PORT || 8080;
+
 const uri = "mongodb+srv://admin:hola123@unlam.1rra4md.mongodb.net/";
 const dbName__ = "inventario";
 
@@ -46,11 +48,10 @@ app.use("/api/instruments/", instrumentsRouter);
 //app.use("/api/carts/", cartsRouter);
 //app.use("/session/", sessionRouter);
 
-
 mongoose.set("strictQuery", false);
 
-const httpServer = app.listen(8080, () => {
-  console.log("Servidor HTTP escuchando en el puerto 8080");
+const httpServer = app.listen(port, () => {
+  console.log(`Servidor HTTP escuchando en el puerto ${port}`);
 });
 
 try {
