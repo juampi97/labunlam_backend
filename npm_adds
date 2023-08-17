@@ -1,0 +1,1 @@
+body-parser connect-mongo cookie-parser cors dotenv express express-handlebars express-session mongodb mongoose mongoose-paginate-v2 mysql nodemon session-file-store socket.io sweetalert2 vercel
